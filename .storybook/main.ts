@@ -1,3 +1,4 @@
+// This file has been automatically migrated to valid ESM format by Storybook.
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -42,6 +43,7 @@ const config: StorybookConfig = {
 				},
 			},
 		},
+		"@storybook/addon-mcp",
 	],
 	async viteFinal(config: UserConfig) {
 		return mergeConfig(config, {
@@ -63,6 +65,10 @@ const config: StorybookConfig = {
 				},
 			},
 		});
+	},
+	features: {
+		experimentalComponentsManifest: true,
+		experimentalCodeExamples: true,
 	},
 };
 
